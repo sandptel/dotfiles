@@ -1,7 +1,7 @@
 {
   "layer": "top", "position": "top",
-  "modules-left": ["custom/logo", "clock",  "custom/weather", "disk", "memory", "cpu", "temperature", "custom/powerDraw", "hyprland/window" ],
-  "modules-center": [  "hyprland/workspaces"],
+  "modules-left": ["custom/logo", "clock",  "custom/weather", "disk", "memory", "cpu", "temperature", "custom/powerDraw", "sway/window" ],
+  "modules-center": [  "sway/workspaces"],
   "modules-right": ["tray",  "custom/clipboard", "backlight", "idle_inhibitor", "custom/colorpicker", "bluetooth", "pulseaudio", "network",  "battery" ],
   "reload_style_on_change":true,
 
@@ -10,7 +10,7 @@
     "tooltip": false
   },
 
-  "hyprland/workspaces": {
+  "sway/workspaces": {
 	"format": "{icon}",
 	"format-icons": {
 		"1": "",
@@ -23,7 +23,7 @@
 		"default": "" 
 	},
        "persistent-workspaces": {
-         "*": [ 2, 3, 4, 5, 6 ]
+         "*": [1, 2, 3, 4, 5, 6 ]
        }
 },
 
@@ -151,7 +151,7 @@
   "format": " {percentage}%"
 },
 
- "hyprland/window": {
+ "sway/window": {
     "format": "( {class} )",
     "rewrite": {
          "(.*) - Mozilla Firefox": "🌎 $1",
