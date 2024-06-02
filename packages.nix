@@ -13,7 +13,8 @@ services.flatpak.enable = true;
       vscode
       obs-studio	
 rustup     
- google-chrome
+clipcat 
+google-chrome
       vlc
       hello
       android-studio
