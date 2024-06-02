@@ -12,7 +12,8 @@ services.flatpak.enable = true;
       git
       vscode
       obs-studio	
-      google-chrome
+rustup     
+ google-chrome
       vlc
       hello
       android-studio
