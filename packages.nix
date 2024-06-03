@@ -12,7 +12,9 @@ services.flatpak.enable = true;
       git
       vscode
       obs-studio	
-rustup     
+rustup
+gcc
+glib     
 clipcat 
 google-chrome
       vlc
