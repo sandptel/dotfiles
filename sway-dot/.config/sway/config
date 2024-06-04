@@ -92,13 +92,22 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 #Binding for scripts
-#ph audio control
+#ph audio control using normal arrows+shift+mod
 
 bindsym Mod4+Shift+Space exec /etc/nixos/sway-dot/.config/scripts/phone.sh play
 bindsym Mod4+Shift+Left exec /etc/nixos/sway-dot/.config/scripts/phone.sh previous
 bindsym Mod4+Shift+Right exec /etc/nixos/sway-dot/.config/scripts/phone.sh next
 bindsym Mod4+Shift+Up exec /etc/nixos/sway-dot/.config/scripts/phone.sh volumeup
 bindsym Mod4+Shift+Down exec /etc/nixos/sway-dot/.config/scripts/phone.sh volumedown
+
+#ph audio control using fn buttons+Mod4
+#apparently shift doesn't work
+
+bindsym Mod4+XF86AudioPlay exec /etc/nixos/sway-dot/.config/scripts/phone.sh play
+bindsym Mod4+XF86AudioPrev exec /etc/nixos/sway-dot/.config/scripts/phone.sh previous
+bindsym Mod4+XF86AudioNext exec /etc/nixos/sway-dot/.config/scripts/phone.sh next
+bindsym Mod4+XF86AudioRaiseVolume exec /etc/nixos/sway-dot/.config/scripts/phone.sh volumeup
+bindsym Mod4+XF86AudioLowerVolume exec /etc/nixos/sway-dot/.config/scripts/phone.sh volumedown
 
 #ph lock
 bindsym Mod4+Shift+l exec /etc/nixos/sway-dot/.config/scripts/phone.sh lock
