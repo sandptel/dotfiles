@@ -100,7 +100,15 @@ bindsym Mod4+Shift+Right exec /etc/nixos/sway-dot/.config/scripts/phone.sh next
 bindsym Mod4+Shift+Up exec /etc/nixos/sway-dot/.config/scripts/phone.sh volumeup
 bindsym Mod4+Shift+Down exec /etc/nixos/sway-dot/.config/scripts/phone.sh volumedown
 
-#audio control
+#ph lock
+bindsym Mod4+Shift+l exec /etc/nixos/sway-dot/.config/scripts/phone.sh lock
+
+# pc audio control
+bindsym Mod4+Up exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym Mod4+Down exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym Mod4+Space exec playerctl play-pause
+bindsym Mod4+Right exec playerctl next
+bindsym Mod4+Left exec playerctl previous
 
 
 bindsym $mod+Shift+Left move left
