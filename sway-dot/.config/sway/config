@@ -85,11 +85,11 @@ bindsym $mod+Tab exec rofi -show
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
-bindsym $mod+Left focus left
+#bindsym $mod+Left focus left
 bindsym $mod+Space focus right
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+#bindsym $mod+Right focus right
 
 #Binding for scripts
 #ph audio control using normal arrows+shift+mod
@@ -101,9 +101,9 @@ bindsym Mod4+Shift+Up exec /etc/nixos/sway-dot/.config/scripts/phone.sh volumeup
 bindsym Mod4+Shift+Down exec /etc/nixos/sway-dot/.config/scripts/phone.sh volumedown
 
 #ph audio control using fn buttons+Mod4/Shift
-#apparently this doesn;t work
+#apparently this doesn't work
 
-bindsym Shift+XF86AudioPlay exec /etc/nixos/sway-dot/.config/scripts/phone.sh play
+bindsym --release Shift+XF86AudioPlay exec /etc/nixos/sway-dot/.config/scripts/phone.sh play
 bindsym Shift+XF86AudioPrev exec /etc/nixos/sway-dot/.config/scripts/phone.sh previous
 bindsym Shift+XF86AudioNext exec /etc/nixos/sway-dot/.config/scripts/phone.sh next
 bindsym Shift+XF86AudioRaiseVolume exec /etc/nixos/sway-dot/.config/scripts/phone.sh volumeup
