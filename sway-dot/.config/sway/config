@@ -109,8 +109,13 @@ bindsym Shift+XF86AudioNext exec /etc/nixos/sway-dot/.config/scripts/phone.sh ne
 bindsym Shift+XF86AudioRaiseVolume exec /etc/nixos/sway-dot/.config/scripts/phone.sh volumeup
 bindsym Shift+XF86AudioLowerVolume exec /etc/nixos/sway-dot/.config/scripts/phone.sh volumedown
 
-#ph lock
+#ph extra controls
 bindsym Mod4+Shift+l exec /etc/nixos/sway-dot/.config/scripts/phone.sh lock
+
+bindsym Mod4+Shift+b exec /etc/nixos/sway-dot/.config/scripts/phone.sh bluetooth
+
+bindsym Mod4+Shift+h exec /etc/nixos/sway-dot/.config/scripts/phone.sh hotspot
+
 
 # pc audio control
 bindsym Mod4+Up exec pactl set-sink-volume @DEFAULT_SINK@ +5%
