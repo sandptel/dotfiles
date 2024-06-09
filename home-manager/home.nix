@@ -39,6 +39,7 @@ dex
 
 
 gtk={
+  enable= true;
   theme.name= "dracula";
   theme.package = [pkgs.dracula-theme];
 
