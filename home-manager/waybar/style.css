@@ -2,8 +2,8 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Iosevka;
-    font-size: 11pt;
+    font-family: NerdFont;
+    font-size: 10pt;
     min-height: 0;
 }
 window#waybar {

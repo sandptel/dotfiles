@@ -1,18 +1,18 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 24,
+  "height": 40,
   "spacing": 4,
   "modules-left": [
-    "wlr/workspaces",
+    "sway/workspaces",
     "wlr/taskbar"
   ],
   "modules-center": [
-    "hyprland/window"
+    "sway/window"
   ],
   "modules-right": [
     "tray",
-    "hyprland/language",
+    "sway/language",
     "custom/weather",
     "clock"
   ],
@@ -23,12 +23,12 @@
       "foot"
     ]
   },
-  "wlr/workspaces": {
+  "sway/workspaces": {
     "on-click": "activate",
-    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-up": "swayctl dispatch workspace e-1",
     "on-scroll-down": "hyprctl dispatch workspace e+1"
   },
-  "hyprland/window": {
+  "sway/window": {
     "max-length": 128
   },
   "clock": {
@@ -45,7 +45,7 @@
     "tooltip": true,
     "interval": 900
   },
-  "hyprland/language": {
+  "sway/language": {
     "format-pl": "[pl]",
     "format-en": "[us]",
     "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"

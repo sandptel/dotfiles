@@ -38,12 +38,6 @@ dex
 ];
 
 
-gtk={
-  enable= true;
-  theme.name= "dracula";
-  theme.package = [pkgs.dracula-theme];
-
-};
 
 home.file.".themes/dracula" = {
      source = ./dracula-gtk;
