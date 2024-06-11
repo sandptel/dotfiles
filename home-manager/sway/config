@@ -122,6 +122,8 @@ bindsym Mod4+Shift+b exec ~/.config/scripts/phone.sh bluetooth
 
 bindsym Mod4+Shift+h exec ~/.config/scripts/phone.sh hotspot
 
+bindsym $mod+p exec ags -t mpris
+
 
 # pc audio control
 bindsym Mod4+Up exec pactl set-sink-volume @DEFAULT_SINK@ +5%

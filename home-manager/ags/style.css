@@ -1,6 +1,7 @@
 .player {
     padding: 10px;
     min-width: 350px;
+    border-radius: 13px;
     font-family: "Iosevka Nerd Font";
 }
 

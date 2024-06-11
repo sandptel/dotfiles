@@ -11,7 +11,6 @@ enable=true;
 
 programs.swayr.enable=true;
 
-
 home.file.".config/sway" = {
      source = ./sway;
      recursive = true;   
