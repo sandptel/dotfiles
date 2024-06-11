@@ -50,10 +50,16 @@ programs.rofi = {
     catppuccin.enable = true;
   };
 
+programs.starship = {
+    enable = true;
+    catppuccin.enable = true;
+  };
 programs.alacritty = {
     enable = true;
     catppuccin.enable = true;
   };
+programs.bash.bashrcExtra ="eval "$(starship init bash)"";  
+
 home.packages = with pkgs;[
   bun
 catppuccin-gtk
