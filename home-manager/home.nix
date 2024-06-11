@@ -24,7 +24,6 @@ home.file.".config/waybar" = {
      executable = true;  
 };
 
-
  gtk = {
     theme = {
       package = pkgs.catppuccin-gtk;
@@ -81,6 +80,7 @@ gcc
 glib     
 clipcat 
 waybar
+ags
 google-chrome
       vlc
       

@@ -27,6 +27,7 @@
         "icon-theme": "Numix-Circle",
         "tooltip-format": "{title}",
         "on-click": "activate",
+        "on-click-right":"maximize",
         "on-click-middle": "close",
         "app_ids-mapping": {
             "firefoxdeveloperedition": "firefox-developer-edition"
@@ -116,7 +117,7 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol "
     },
     "custom/weather": {
         "format": "{}",
