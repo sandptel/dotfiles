@@ -100,8 +100,8 @@
             "",
             "",
             ""
-        ],
-        "on-click": "ags -t quicksettings"
+        ]
+        
     },
     "pulseaudio": {
         "format": "{icon} {volume}% {format_source}",
@@ -117,7 +117,7 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol "
+        "on-click": "ags -t mpris"
     },
     "custom/weather": {
         "format": "{}",

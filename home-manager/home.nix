@@ -23,6 +23,9 @@ home.file.".config/waybar" = {
      recursive = true;   
      executable = true;  
 };
+home.file.".config/ags" = {
+     source = ./ags;
+};
 
  gtk = {
     theme = {
@@ -52,6 +55,7 @@ programs.alacritty = {
     catppuccin.enable = true;
   };
 home.packages = with pkgs;[
+  bun
 catppuccin-gtk
 catppuccin-qt5ct
 catppuccin-cursors
