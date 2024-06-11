@@ -1,5 +1,5 @@
 {
-    "height": 32,
+    "height": 30,
     "spacing": 10,
     "modules-left": [
         "sway/workspaces",
@@ -29,9 +29,12 @@
         "on-click": "activate",
         "on-click-right":"maximize",
         "on-click-middle": "close",
+        "group-apps": true,
+        "sort-by-app-id":true,
         "app_ids-mapping": {
             "firefoxdeveloperedition": "firefox-developer-edition"
-        },
+        }
+        ,
         "rewrite": {
             "Firefox Web Browser": "Firefox",
             "Foot Server": "Terminal"
