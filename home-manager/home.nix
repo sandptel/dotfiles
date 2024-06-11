@@ -53,12 +53,18 @@ programs.rofi = {
 programs.starship = {
     enable = true;
     catppuccin.enable = true;
+    enableBashIntegration=true;
   };
 programs.alacritty = {
     enable = true;
     catppuccin.enable = true;
   };
-programs.bash.bashrcExtra ="eval "$(starship init bash)"";  
+programs.bash =
+{
+  enable=true;
+  enableCompletion = true;
+};
+  
 
 home.packages = with pkgs;[
   bun
