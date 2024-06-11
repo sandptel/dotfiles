@@ -42,8 +42,6 @@ workspace 3
 exec alacritty
 
 exec 'sleep 3; swaymsg workspace 1'
-exec eww daemon
-exec eww open bar
 
 
 #testing touchpad
