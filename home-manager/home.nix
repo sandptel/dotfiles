@@ -114,6 +114,16 @@ home.file.".images" = {
      executable = true;  # make all files executable
 };
 
+home.file.".config/scripts" = {
+     source = ./scripts;
+     recursive = true;   # link recursively
+     executable = true;  # make all files executable
+};
+home.file.".config/eww" = {
+     source = ./eww;
+     recursive = true;   # link recursively
+     executable = true;  # make all files executable
+};
 
 home.stateVersion = "23.11";
 

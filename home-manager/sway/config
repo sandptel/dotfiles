@@ -100,27 +100,27 @@ bindsym $mod+Up focus up
 #Binding for scripts
 #ph audio control using normal arrows+shift+mod
 
-bindsym Mod4+Shift+Space exec /etc/nixos/sway-dot/.config/scripts/phone.sh play
-bindsym Mod4+Shift+Left exec /etc/nixos/sway-dot/.config/scripts/phone.sh previous
-bindsym Mod4+Shift+Right exec /etc/nixos/sway-dot/.config/scripts/phone.sh next
-bindsym Mod4+Shift+Up exec /etc/nixos/sway-dot/.config/scripts/phone.sh volumeup
-bindsym Mod4+Shift+Down exec /etc/nixos/sway-dot/.config/scripts/phone.sh volumedown
+bindsym Mod4+Shift+Space exec ~/.config/scripts/phone.sh play
+bindsym Mod4+Shift+Left exec ~/.config/scripts/phone.sh previous
+bindsym Mod4+Shift+Right exec ~/.config/scripts/phone.sh next
+bindsym Mod4+Shift+Up exec ~/.config/scripts/phone.sh volumeup
+bindsym Mod4+Shift+Down exec ~/.config/scripts/phone.sh volumedown
 
 #ph audio control using fn buttons+Mod4/Shift
 #apparently this doesn't work
 
-bindsym --release Shift+XF86AudioPlay exec /etc/nixos/sway-dot/.config/scripts/phone.sh play
-bindsym Shift+XF86AudioPrev exec /etc/nixos/sway-dot/.config/scripts/phone.sh previous
-bindsym Shift+XF86AudioNext exec /etc/nixos/sway-dot/.config/scripts/phone.sh next
-bindsym Shift+XF86AudioRaiseVolume exec /etc/nixos/sway-dot/.config/scripts/phone.sh volumeup
-bindsym Shift+XF86AudioLowerVolume exec /etc/nixos/sway-dot/.config/scripts/phone.sh volumedown
+bindsym --release Shift+XF86AudioPlay exec ~/.config/scripts/phone.sh play
+bindsym Shift+XF86AudioPrev exec ~/.config/scripts/phone.sh previous
+bindsym Shift+XF86AudioNext exec ~/.config/scripts/phone.sh next
+bindsym Shift+XF86AudioRaiseVolume exec ~/.config/scripts/phone.sh volumeup
+bindsym Shift+XF86AudioLowerVolume exec ~/.config/scripts/phone.sh volumedown
 
 #ph extra controls
-bindsym Mod4+Shift+l exec /etc/nixos/sway-dot/.config/scripts/phone.sh lock
+bindsym Mod4+Shift+l exec ~/.config/scripts/phone.sh lock
 
-bindsym Mod4+Shift+b exec /etc/nixos/sway-dot/.config/scripts/phone.sh bluetooth
+bindsym Mod4+Shift+b exec ~/.config/scripts/phone.sh bluetooth
 
-bindsym Mod4+Shift+h exec /etc/nixos/sway-dot/.config/scripts/phone.sh hotspot
+bindsym Mod4+Shift+h exec ~/.config/scripts/phone.sh hotspot
 
 
 # pc audio control
