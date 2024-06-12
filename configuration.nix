@@ -16,11 +16,12 @@ programs.hyprland.enable= true;
 programs.sway.enable=true;
 
 
+
    nix.settings.experimental-features =[ "nix-command" "flakes" ];
     
   # Bootloader.
-
   boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.graceful=true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelModules = [ "v4l2loopback" ];
   boot.extraModulePackages = [ pkgs.linuxPackages.v4l2loopback ];

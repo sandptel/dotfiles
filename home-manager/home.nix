@@ -1,9 +1,9 @@
-{ config,catppuccin, pkgs, ... }:
-
+{ config,inputs,catppuccin, pkgs, ... }:
 {
-  # TODO please change the username & home directory to your own
+
   home.username = "roronoa";
   home.homeDirectory = "/home/roronoa";
+
 
 wayland.windowManager.sway={
 enable=true;
@@ -12,7 +12,7 @@ enable=true;
 programs.swayr.enable=true;
 
 home.file.".config/sway" = {
-     source = ./sway;
+     source = ./sway/sway;
      recursive = true;   
      executable = true;  
 };
@@ -67,6 +67,7 @@ programs.bash =
 
 home.packages = with pkgs;[
   bun
+  eza
 catppuccin-gtk
 catppuccin-qt5ct
 catppuccin-cursors
