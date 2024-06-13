@@ -34,7 +34,7 @@
           home-manager.users.roronoa = {
             imports= [
               inputs.nix-colors.homeManagerModules.default
-              ./home-manager/home.nix
+                        ./home-manager/home.nix
               catppuccin.homeManagerModules.catppuccin
             ];
           };
