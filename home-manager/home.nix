@@ -3,6 +3,7 @@
 {
   home.username = "roronoa";
   home.homeDirectory = "/home/roronoa";
+  home.enableNixpkgsReleaseCheck = false;
   imports = [
     ./themes/theme.nix
   ];
