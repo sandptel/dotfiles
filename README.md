@@ -22,3 +22,7 @@ git clone https://github.com/sandptel
 ```bash
 sudo nixos-rebuild switch --flake .#roronoa
 ```
+OR direct install via
+```bash
+sudo nixos-rebuild switch --flake github:sandptel/dotfiles#roronoa
+```
