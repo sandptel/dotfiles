@@ -57,6 +57,7 @@ programs.bash =
   
 
 home.packages = with pkgs;[
+networkmanagerapplet  
 flameshot
 catppuccin-kde
 catppuccin-gtk

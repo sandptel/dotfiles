@@ -35,7 +35,7 @@ workspace 3 output DP-1
 
 workspace 1
 exec firefox
-
+exec nm-applet
 workspace 3
 exec alacritty
 
