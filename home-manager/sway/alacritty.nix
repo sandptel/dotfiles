@@ -1,2 +1,0 @@
-{ config,catppuccin, pkgs, ... }:
-

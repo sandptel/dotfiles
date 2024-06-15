@@ -3,19 +3,17 @@ set $mod mod1
 set $term alacritty
 
 # Visual
-gaps inner 8
+gaps inner 6
 
 font pango: Iosevka 9
 
-default_border pixel 2
+default_border pixel 3
 
-set $cl_high #962a54
-set $cl_indi #962a54
-set $cl_back #231f20
-set $cl_fore #962a54
-set $cl_urge #ee2e24
-
-
+set $cl_high #b4befe
+set $cl_indi #b4befe
+set $cl_back #a6e3a1
+set $cl_fore #89b4fa
+set $cl_urge #94e2d5
 
 
 client.focused          $cl_high $cl_high $cl_fore $cl_indi $cl_high
