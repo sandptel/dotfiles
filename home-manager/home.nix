@@ -55,7 +55,6 @@ programs.bash =
   enable=true;
   enableCompletion = true;
 };
-  
 
 home.packages = with pkgs;[
 blueman
