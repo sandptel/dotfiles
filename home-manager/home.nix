@@ -4,7 +4,6 @@
   home.username = "roronoa";
   home.homeDirectory = "/home/roronoa";
 
-
 wayland.windowManager.sway={
 enable=true;
 };
@@ -43,6 +42,12 @@ gtk.catppuccin.gnomeShellTheme=true;
 qt.enable=true;
 qt.style.catppuccin.enable=true;
 
+programs.firefox=
+{
+  enable=true;
+  
+};
+
 
 programs.rofi = {
     enable = true;
@@ -66,8 +71,8 @@ programs.bash =
   
 
 home.packages = with pkgs;[
-  bun
-  eza
+bun
+eza
 catppuccin-gtk
 catppuccin-qt5ct
 catppuccin-cursors
@@ -98,14 +103,13 @@ clipcat
 waybar
 ags
 google-chrome
-      vlc
-      
-      telegram-desktop
-      discord
-      gnomeExtensions.pano
-      libnotify
-      github-desktop
-      
+vlc
+telegram-desktop
+discord
+gnomeExtensions.pano
+libnotify
+github-desktop
+   
 ];
 
 home.file.".images" = {
@@ -125,7 +129,7 @@ home.file.".config/eww" = {
      executable = true;  # make all files executable
 };
 
-home.stateVersion = "23.11";
+home.stateVersion = "24.05";
 
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;

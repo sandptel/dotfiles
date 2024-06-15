@@ -1,46 +1,39 @@
 {
-  description = "A simple NixOS flake";
+  description = "A very basic flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-    nix-colors.url= "github:misterio77/nix-colors";
-    catppuccin.url = "github:catppuccin/nix";
-    nixvim.url = "github:nix-community/nixvim";
-    home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    homeManager={
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
+      };
+     catppuccin.url = "github:catppuccin/nix";  
   };
 
-  outputs = inputs@{catppuccin,nix-colors, nixvim,nixpkgs, home-manager, ... }: {
-    nixosConfigurations = {
-      roronoa = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs={inherit nix-colors;};
-        modules = [
-          catppuccin.nixosModules.catppuccin
-          {
-          catppuccin.enable= true;
-          catppuccin.flavor = "mocha";
-          }
-          ./configuration.nix
-          ./packages.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-          }
-          {
-          home-manager.users.roronoa = {
-            imports= [
-              inputs.nix-colors.homeManagerModules.default
-                        ./home-manager/home.nix
-              catppuccin.homeManagerModules.catppuccin
-            ];
-          };
-        }
-        ];
-      };
+  outputs = { self, nixpkgs,home-manager, ... }@inputs: 
+  let 
+  system = "x86_64-linux";
+  pkgs = nixpkgs.legacyPackages.${system};
+  in
+  {
+    nixosConfigurations.roronoa = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit system inputs;};
+      modules = [
+        ./configuration.nix
+        ./hardware-configuration.nix
+        ./packages.nix
+        inputs.catppuccin.nixosModules.catppuccin
+      ];
     };
+#remains unused for now can be accessed using home-manager switch
+    homeConfigurations.roronoa = home-manager.lib.homeManagerConfiguration{
+      inherit pkgs;
+      extraSpecialArgs = {inherit system inputs;};
+      modules=[
+        ./home-manager/home.nix
+        inputs.catppuccin.homeManagerModules.catppuccin
+      ];
+    };
+    
   };
 }

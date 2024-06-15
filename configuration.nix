@@ -8,16 +8,29 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./packages.nix
+      inputs.home-manager.nixosModules.home-manager
     ];
-    
+#enabling home-manager here too.
 
-programs.hyprland.enable= true;
+
+home-manager={
+  extraSpecialArgs={inherit inputs;};
+  useGlobalPkgs=true;
+  useUserPackages=true;
+  users={
+    roronoa= {
+      imports =[
+      ./home-manager/home.nix
+      inputs.catppuccin.homeManagerModules.catppuccin
+      ];
+      };
+  };
+};
+
+
 programs.sway.enable=true;
 
-
-
-   nix.settings.experimental-features =[ "nix-command" "flakes" ];
+nix.settings.experimental-features =[ "nix-command" "flakes" ];
     
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
