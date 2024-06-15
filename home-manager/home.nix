@@ -57,6 +57,7 @@ programs.bash =
   
 
 home.packages = with pkgs;[
+flameshot
 catppuccin-kde
 catppuccin-gtk
 catppuccin-qt5ct

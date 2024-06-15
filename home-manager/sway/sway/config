@@ -79,7 +79,8 @@ bindsym $mod+v exec clipcat-menu
 
 
 # Bindings
-bindsym Print+Ctrl+Shift exec grim -g "$(slurp -d)" - | wl-copy
+bindsym Mod4+Shift+s exec flameshot gui
+bindsym Print exec flameshot full
 
 bindsym $mod+Return exec $term
 bindsym Ctrl+q kill
