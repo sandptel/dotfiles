@@ -97,27 +97,27 @@ bindsym $mod+Up focus up
 #Binding for scripts
 #ph audio control using normal arrows+shift+mod
 
-bindsym Mod4+Shift+Space exec ~/.config/scripts/phone.sh play
-bindsym Mod4+Shift+Left exec ~/.config/scripts/phone.sh previous
-bindsym Mod4+Shift+Right exec ~/.config/scripts/phone.sh next
-bindsym Mod4+Shift+Up exec ~/.config/scripts/phone.sh volumeup
-bindsym Mod4+Shift+Down exec ~/.config/scripts/phone.sh volumedown
+bindsym Mod4+Shift+Space exec phcontrol play
+bindsym Mod4+Shift+Left exec phcontrol previous
+bindsym Mod4+Shift+Right exec phcontrol next
+bindsym Mod4+Shift+Up exec phcontrol volumeup
+bindsym Mod4+Shift+Down exec phcontrol volumedown
 
 #ph audio control using fn buttons+Mod4/Shift
 #apparently this doesn't work
 
-bindsym --release Shift+XF86AudioPlay exec ~/.config/scripts/phone.sh play
-bindsym Shift+XF86AudioPrev exec ~/.config/scripts/phone.sh previous
-bindsym Shift+XF86AudioNext exec ~/.config/scripts/phone.sh next
-bindsym Shift+XF86AudioRaiseVolume exec ~/.config/scripts/phone.sh volumeup
-bindsym Shift+XF86AudioLowerVolume exec ~/.config/scripts/phone.sh volumedown
+bindsym --release Shift+XF86AudioPlay exec phcontrol play
+bindsym Shift+XF86AudioPrev exec phcontrol previous
+bindsym Shift+XF86AudioNext exec phcontrol next
+bindsym Shift+XF86AudioRaiseVolume exec phcontrol volumeup
+bindsym Shift+XF86AudioLowerVolume exec phcontrol volumedown
 
 #ph extra controls
-bindsym Mod4+Shift+l exec ~/.config/scripts/phone.sh lock
+bindsym Mod4+Shift+l exec phcontrol lock
 
-bindsym Mod4+Shift+b exec ~/.config/scripts/phone.sh bluetooth
+bindsym Mod4+Shift+b exec phcontrol bluetooth
 
-bindsym Mod4+Shift+h exec ~/.config/scripts/phone.sh hotspot
+bindsym Mod4+Shift+h exec phcontrol hotspot
 
 bindsym $mod+p exec ags -t mpris
 

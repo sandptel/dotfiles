@@ -6,6 +6,7 @@
   home.enableNixpkgsReleaseCheck = false;
   imports = [
     ./themes/theme.nix
+    ./scripts/scripts.nix
   ];
 wayland.windowManager.sway={
 enable=true;
