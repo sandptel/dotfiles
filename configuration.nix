@@ -3,16 +3,18 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config,inputs, pkgs, ... }:
-
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.home-manager
     ];
-#enabling home-manager here too.
 
+catppuccin.enable=true;
+catppuccin.flavor = "mocha";
+catppuccin.accent = "lavender";
 
+#enabling home-manager here too
 home-manager={
   extraSpecialArgs={inherit inputs;};
   useGlobalPkgs=true;

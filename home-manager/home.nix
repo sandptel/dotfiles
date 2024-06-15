@@ -25,6 +25,8 @@ home.file.".config/ags" = {
      source = ./ags;
 };
 
+
+#theming
  gtk = {
     theme = {
       package = pkgs.catppuccin-gtk;
@@ -33,7 +35,7 @@ home.file.".config/ags" = {
     iconTheme.package = pkgs.catppuccin-icons;
     cursorTheme.size = 30;
   };
-
+home.sessionVariables.GTK_THEME = "Catppuccin-Mocha-Standard-Blue-dark";
 catppuccin.enable=true;
 catppuccin.flavor = "mocha";
 catppuccin.accent = "lavender";
@@ -73,9 +75,6 @@ programs.bash =
 home.packages = with pkgs;[
 bun
 eza
-catppuccin-gtk
-catppuccin-qt5ct
-catppuccin-cursors
 hyprpaper
 wofi
 dunst
