@@ -1,9 +1,11 @@
 { config,inputs,catppuccin, pkgs, ... }:
-{
 
+{
   home.username = "roronoa";
   home.homeDirectory = "/home/roronoa";
-
+  imports = [
+    ./themes/theme.nix
+  ];
 wayland.windowManager.sway={
 enable=true;
 };
@@ -26,30 +28,11 @@ home.file.".config/ags" = {
 };
 
 
-#theming
- gtk = {
-    theme = {
-      package = pkgs.catppuccin-gtk;
-      name = "Catppuccin-Mocha";
-    };
-    iconTheme.package = pkgs.catppuccin-icons;
-    cursorTheme.size = 30;
-  };
-home.sessionVariables.GTK_THEME = "Catppuccin-Mocha-Standard-Blue-dark";
-catppuccin.enable=true;
-catppuccin.flavor = "mocha";
-catppuccin.accent = "lavender";
-gtk.catppuccin.enable =true;
-gtk.catppuccin.gnomeShellTheme=true;
-qt.enable=true;
-qt.style.catppuccin.enable=true;
-
 programs.firefox=
 {
   enable=true;
   
 };
-
 
 programs.rofi = {
     enable = true;
@@ -73,6 +56,9 @@ programs.bash =
   
 
 home.packages = with pkgs;[
+catppuccin-kde
+catppuccin-gtk
+catppuccin-qt5ct
 bun
 eza
 hyprpaper
