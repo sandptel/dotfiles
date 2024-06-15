@@ -10,7 +10,7 @@ font pango: Iosevka 9
 default_border pixel 3
 
 set $cl_high #b4befe
-set $cl_indi #eba0ac
+set $cl_indi #b4befe
 set $cl_back #a6e3a1
 set $cl_fore #89b4fa
 set $cl_urge #94e2d5
