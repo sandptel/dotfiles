@@ -57,6 +57,8 @@ programs.bash =
   
 
 home.packages = with pkgs;[
+blueman
+rofi-bluetooth
 networkmanagerapplet  
 flameshot
 catppuccin-kde
