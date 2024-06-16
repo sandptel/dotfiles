@@ -6,13 +6,15 @@
   home.enableNixpkgsReleaseCheck = false;
   imports = [
     ./themes/theme.nix
+    # ./scripts/scripts.nix
     ./scripts/scripts.nix
   ];
+
 wayland.windowManager.sway={
 enable=true;
 };
 
-programs.swayr.enable=true;
+module.phcontrol.enable=true;
 
 home.file.".config/sway" = {
      source = ./sway/sway;
@@ -25,6 +27,7 @@ home.file.".config/waybar" = {
      recursive = true;   
      executable = true;  
 };
+
 home.file.".config/ags" = {
      source = ./ags;
 };
@@ -57,6 +60,9 @@ programs.bash =
 };
 
 home.packages = with pkgs;[
+wl-clipboard
+grim
+slurp
 blueman
 rofi-bluetooth
 networkmanagerapplet  

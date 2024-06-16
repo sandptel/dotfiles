@@ -106,6 +106,7 @@ bindsym Mod4+Shift+Down exec phcontrol volumedown
 #ph audio control using fn buttons+Mod4/Shift
 #apparently this doesn't work
 
+
 bindsym --release Shift+XF86AudioPlay exec phcontrol play
 bindsym Shift+XF86AudioPrev exec phcontrol previous
 bindsym Shift+XF86AudioNext exec phcontrol next
@@ -119,10 +120,10 @@ bindsym Mod4+Shift+b exec phcontrol bluetooth
 
 bindsym Mod4+Shift+h exec phcontrol hotspot
 
-bindsym $mod+p exec ags -t mpris
+
 
 bindsym Mod4+b exec rofi-bluetooth
-
+bindsym Mod1+p exec ags -t mpris
 
 # pc audio control
 bindsym Mod4+Up exec pactl set-sink-volume @DEFAULT_SINK@ +5%
