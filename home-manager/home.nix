@@ -41,7 +41,6 @@ programs.firefox=
 
 programs.rofi = {
     enable = true;
-    catppuccin.enable = true;
   };
 
 programs.starship = {
