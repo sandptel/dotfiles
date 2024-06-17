@@ -8,9 +8,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
       };
      catppuccin.url = "github:catppuccin/nix";  
+     auto-cpufreq = {
+            url = "github:AdnanHodzic/auto-cpufreq";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
   };
 
-  outputs = { self, nixpkgs,home-manager, ... }@inputs: 
+  outputs = { self,nixpkgs,home-manager, ... }@inputs: 
   let 
   system = "x86_64-linux";
   pkgs = nixpkgs.legacyPackages.${system};
@@ -23,6 +27,7 @@
         ./hardware-configuration.nix
         ./packages.nix
         inputs.catppuccin.nixosModules.catppuccin
+        inputs.auto-cpufreq.nixosModules.default
       ];
     };
 #remains unused for now can be accessed using home-manager switch

@@ -41,7 +41,19 @@ nix.settings.experimental-features =[ "nix-command" "flakes" ];
   boot.extraModulePackages = [ pkgs.linuxPackages.v4l2loopback ];
 
   services.thermald.enable = lib.mkDefault true;
-  services.auto-cpufreq.enable=true;
+  powerManagement.enable = true;
+  programs.auto-cpufreq.enable = true;
+    # optionally, you can configure your auto-cpufreq settings, if you have any
+    programs.auto-cpufreq.settings = {
+    charger = {
+      governor = "performance";
+      turbo = "auto";
+    };
+    battery = {
+      governor = "powersave";
+      turbo = "auto";
+    };
+  };
 
   virtualisation.virtualbox.host.enable = true;
   networking.hostName = "nixos"; # Define your hostname.
