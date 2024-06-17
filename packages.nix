@@ -5,8 +5,7 @@ services.flatpak.enable = true;
     isNormalUser = true;
     description = "roronoa";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-home-manager  
+    packages = with pkgs; [ 
 zed-editor
 neofetch
 firefox

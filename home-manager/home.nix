@@ -1,4 +1,4 @@
-{ config,inputs,catppuccin, pkgs, ... }:
+{ config,lib,inputs,catppuccin, pkgs, ... }:
 
 {
   home.username = "roronoa";
@@ -38,19 +38,20 @@ programs.firefox=
   enable=true;
   
 };
-
+#the theme is enabled by default............. at theme.nix
 programs.rofi = {
     enable = true;
+    # theme= lib.mkForce "Arc-Dark by leofa";
   };
 
 programs.starship = {
     enable = true;
-    catppuccin.enable = true;
+    # catppuccin.enable = true;
     enableBashIntegration=true;
   };
 programs.alacritty = {
     enable = true;
-    catppuccin.enable = true;
+    # catppuccin.enable = true;
   };
 programs.bash =
 {
@@ -120,6 +121,12 @@ home.file.".config/eww" = {
      recursive = true;   # link recursively
      executable = true;  # make all files executable
 };
+
+# home.file.".config/rofi" = {
+#      source = ./rofi;
+#      recursive = true;   # link recursively
+#      executable = true;  # make all files executable
+# };
 
 home.stateVersion = "23.11";
 

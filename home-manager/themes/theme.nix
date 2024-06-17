@@ -29,6 +29,7 @@ home.file.".config/gtk-4.0" = {
      source = ./${theme}/gtk-4.0; 
      recursive = true;   
      executable = true;  
+     
 };
 catppuccin.enable=true;
 catppuccin.flavor = "mocha";
