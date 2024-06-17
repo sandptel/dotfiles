@@ -122,7 +122,7 @@ home.file.".config/eww" = {
      executable = true;  # make all files executable
 };
 
-home.stateVersion = "24.05";
+home.stateVersion = "23.11";
 
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;

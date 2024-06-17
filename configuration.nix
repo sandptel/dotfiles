@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config,inputs, pkgs, ... }:
+{ config,inputs,lib, pkgs, ... }:
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -39,6 +39,10 @@ nix.settings.experimental-features =[ "nix-command" "flakes" ];
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelModules = [ "v4l2loopback" ];
   boot.extraModulePackages = [ pkgs.linuxPackages.v4l2loopback ];
+
+  services.thermald.enable = lib.mkDefault true;
+  services.auto-cpufreq.enable=true;
+
   virtualisation.virtualbox.host.enable = true;
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
