@@ -67,9 +67,6 @@ blueman
 rofi-bluetooth
 networkmanagerapplet  
 flameshot
-catppuccin-kde
-catppuccin-gtk
-catppuccin-qt5ct
 bun
 eza
 hyprpaper

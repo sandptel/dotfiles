@@ -14,6 +14,11 @@ in
 #   };
 #none of the above commands work and only this sessionVariable command works and only this one theme gets installed via catppuccin-gtk
 
+home.packages= with pkgs;[catppuccin-kde
+gnome.gnome-tweaks
+catppuccin-gtk
+catppuccin-qt5ct];
+
 home.sessionVariables.GTK_THEME = "${theme}";
 home.file.".themes/${theme}" = {
      source = ./${theme}; 

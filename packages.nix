@@ -7,6 +7,7 @@ services.flatpak.enable = true;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
 home-manager  
+zed-editor
 neofetch
 firefox
 vim
