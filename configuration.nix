@@ -10,9 +10,10 @@
       inputs.home-manager.nixosModules.home-manager
     ];
 
-catppuccin.enable=true;
-catppuccin.flavor = "mocha";
-catppuccin.accent = "lavender";
+programs.hyprland={
+  enable=true;
+  xwayland.enable=true;
+};
 
 #enabling home-manager here too
 home-manager={

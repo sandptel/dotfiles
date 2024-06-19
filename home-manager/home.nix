@@ -4,133 +4,43 @@
   home.username = "roronoa";
   home.homeDirectory = "/home/roronoa";
   home.enableNixpkgsReleaseCheck = false;
-  imports = [
-    ./themes/theme.nix
-    # ./scripts/scripts.nix
-    ./scripts/scripts.nix
-  ];
 
-wayland.windowManager.sway={
-enable=true;
+# imports=[./ags.nix];
+
+home.file.".config/hypr" = {
+     source = ./hypr;
+     recursive = true;   # link recursively
+     executable = true;  # make all files executable
 };
 
-module.phcontrol.enable=true;
-
-home.file.".config/sway" = {
-     source = ./sway/sway;
-     recursive = true;   
-     executable = true;  
-};
-
-home.file.".config/waybar" = {
-     source = ./waybar;
+programs.bash.enable=true;
+programs.starship = {
+    enable = true;
+    # catppuccin.enable = true;
+    enableBashIntegration=true;
+  };
+programs.firefox.enable=true;
+programs.fuzzel.enable=true;
+home.file.".config/fuzzel" = {
+     source = ./fuzzel;
      recursive = true;   
      executable = true;  
 };
 
 home.file.".config/ags" = {
      source = ./ags;
+     recursive = true;   
+     executable = true;  
 };
 
-
-programs.firefox=
-{
-  enable=true;
-  
-};
-#the theme is enabled by default............. at theme.nix
-programs.rofi = {
-    enable = true;
-    # theme= lib.mkForce "Arc-Dark by leofa";
-  };
-
-programs.starship = {
-    enable = true;
-    # catppuccin.enable = true;
-    enableBashIntegration=true;
-  };
-programs.alacritty = {
-    enable = true;
-    # catppuccin.enable = true;
-  };
-programs.bash =
-{
-  enable=true;
-  enableCompletion = true;
-};
 
 home.packages = with pkgs;[
-wl-clipboard
-grim
-slurp
-blueman
-rofi-bluetooth
-networkmanagerapplet  
-flameshot
-bun
-eza
-hyprpaper
-wofi
-dunst
-eww
-pulseaudio
-brightnessctl
-playerctl
-neofetch
-bemenu
-dmenu
-swaylock
-swayidle
-i3status
-i3lock
-dex
-firefox
-vim
-git
-vscode
-obs-studio	
-rustup
-gcc
-glib     
-clipcat 
-waybar
 ags
-google-chrome
-vlc
-telegram-desktop
-discord
-gnomeExtensions.pano
-libnotify
-github-desktop
-   
 ];
 
-home.file.".images" = {
-     source = ./.images;
-     recursive = true;   # link recursively
-     executable = true;  # make all files executable
-};
-
-home.file.".config/scripts" = {
-     source = ./scripts;
-     recursive = true;   # link recursively
-     executable = true;  # make all files executable
-};
-home.file.".config/eww" = {
-     source = ./eww;
-     recursive = true;   # link recursively
-     executable = true;  # make all files executable
-};
-
-# home.file.".config/rofi" = {
-#      source = ./rofi;
-#      recursive = true;   # link recursively
-#      executable = true;  # make all files executable
-# };
-
-home.stateVersion = "23.11";
+  home.stateVersion = "23.11";
 
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;
-  
-}
+
+}  

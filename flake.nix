@@ -12,6 +12,7 @@
             url = "github:AdnanHodzic/auto-cpufreq";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+      ags.url = "github:Aylur/ags";  
   };
 
   outputs = { self,nixpkgs,home-manager, ... }@inputs: 
@@ -21,7 +22,7 @@
   in
   {
     nixosConfigurations.roronoa = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit system inputs;};
+      specialArgs = {inherit self system inputs;};
       modules = [
         ./configuration.nix
         ./hardware-configuration.nix
