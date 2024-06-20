@@ -16,9 +16,6 @@ networkmanagerapplet
 flameshot
 bun
 eza
-hyprpaper
-wofi
-dunst
 pulseaudio
 brightnessctl
 playerctl
@@ -31,7 +28,6 @@ obs-studio
 rustup
 gcc
 glib     
-waybar
 google-chrome
 vlc
 telegram-desktop

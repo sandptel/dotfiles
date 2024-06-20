@@ -5,8 +5,11 @@
   home.homeDirectory = "/home/roronoa";
   home.enableNixpkgsReleaseCheck = false;
 
-# imports=[./ags.nix];
-
+imports=[./ags.nix
+./waybar.nix
+./themes/theme.nix
+];
+wayland.windowManager.hyprland.enable=true;
 home.file.".config/hypr" = {
      source = ./hypr;
      recursive = true;   # link recursively
@@ -35,7 +38,7 @@ home.file.".config/ags" = {
 
 
 home.packages = with pkgs;[
-ags
+# ags
 ];
 
   home.stateVersion = "23.11";
