@@ -6,7 +6,7 @@ services.flatpak.enable = true;
     description = "roronoa";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [ 
-kitty
+figma-linux
 wl-clipboard
 grim
 slurp

@@ -17,6 +17,14 @@ home.file.".config/hypr" = {
      executable = true;  # make all files executable
 };
 
+programs.kitty={
+  enable = true;
+  extraConfig = ''
+  font_size 14
+  background_opacity 0.5
+  '';
+};
+
 programs.bash.enable=true;
 programs.starship = {
     enable = true;
