@@ -9,6 +9,7 @@ imports=[./ags.nix
 ./waybar.nix
 ./themes/theme.nix
 ./hyprpaper.nix
+./scripts/scripts.nix
 ];
 wayland.windowManager.hyprland.enable=true;
 home.file.".config/hypr" = {
