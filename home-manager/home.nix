@@ -16,7 +16,7 @@ home.file.".config/hypr" = {
      recursive = true;   # link recursively
      executable = true;  # make all files executable
 };
-
+ 
 module.phcontrol.enable=true;
 
 programs.kitty={
