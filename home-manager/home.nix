@@ -13,8 +13,8 @@ imports=[./ags.nix
 wayland.windowManager.hyprland.enable=true;
 home.file.".config/hypr" = {
      source = ./hypr;
-     recursive = true;   # link recursively
-     executable = true;  # make all files executable
+     recursive = true;   
+     executable = true;  
 };
  
 module.phcontrol.enable=true;
