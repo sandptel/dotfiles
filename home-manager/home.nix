@@ -50,6 +50,7 @@ home.file.".config/ags" = {
 
 home.packages = with pkgs;[
 # ags
+eww
 ];
 
   home.stateVersion = "23.11";
