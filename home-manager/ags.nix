@@ -39,6 +39,10 @@ home.file.".config/ags" = {
       webkitgtk
       webp-pixbuf-loader
       ydotool
+      swww
+      sass
+      fd
+      dart-saas
     ];
   };
 }
