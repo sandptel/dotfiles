@@ -1,0 +1,29 @@
+{ inputs, pkgs, ... }:
+{
+home.packages = with pkgs; [
+  ubuntu_font_family
+  socat
+  jq
+  eww
+  bluez
+  pavucontrol
+  brightnessctl
+  playerctl
+  acpi
+  inotify-tools
+  networkmanagerapplet
+  imagemagick
+  gjs
+  gnome.gnome-bluetooth
+  upower
+  networkmanager
+  gtk3
+  wl-gammactl
+  wlsunset
+  wl-clipboard
+  hyprpicker
+  hyprshot
+  blueberry
+  polkit_gnome
+];
+}

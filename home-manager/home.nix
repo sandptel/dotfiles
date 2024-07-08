@@ -9,6 +9,9 @@ imports=[./ags.nix
 ./themes/theme.nix
 ./hyprpaper.nix
 ./scripts/scripts.nix
+./eww/eww.nix
+./ags.nix
+
 ];
 wayland.windowManager.hyprland.enable=true;
 home.file.".config/hypr" = {
@@ -41,15 +44,7 @@ home.file.".config/fuzzel" = {
      executable = true;  
 };
 
-home.file.".config/ags" = {
-     source = ./ags;
-     recursive = true;   
-     executable = true;  
-};
-
-
 home.packages = with pkgs;[
-# ags
 eww
 ];
 
