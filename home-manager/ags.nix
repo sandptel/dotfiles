@@ -42,7 +42,7 @@ home.file.".config/ags" = {
       swww
       sass
       fd
-      dart-saas
+      dart-sass
     ];
   };
 }

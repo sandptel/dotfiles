@@ -46,6 +46,7 @@ home.file.".config/fuzzel" = {
 
 home.packages = with pkgs;[
 eww
+airshipper
 ];
 
   home.stateVersion = "23.11";
