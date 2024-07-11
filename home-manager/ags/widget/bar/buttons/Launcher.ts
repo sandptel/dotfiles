@@ -18,7 +18,7 @@ function Spinner() {
 
             image.spinning {
                 animation-name: spin;
-                animation-duration: 1s;
+                animation-duration: 2s;
                 animation-timing-function: linear;
                 animation-iteration-count: infinite;
             }
