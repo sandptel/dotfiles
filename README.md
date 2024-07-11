@@ -1,8 +1,8 @@
 # Dotfiles
 **Theme - Catppuccin Mocha**
+**Bar- AGS**
 
-![2024-06-15_09-33_1](https://github.com/sandptel/dotfiles/assets/96694484/c628e5d6-759b-41ea-9570-a32c3ec659df)
-![2024-06-15_09-33](https://github.com/sandptel/dotfiles/assets/96694484/be6d5050-ae34-4878-89fa-18a91bc4d356)
+![20240712_03h05m30s_grim](https://github.com/user-attachments/assets/0a87f65d-7cb2-4683-9ec2-b4f2347d7729)
 
 # **!!! Do Not Blindly install these dots**
 
