@@ -11,9 +11,13 @@ imports=[./ags.nix
 ./scripts/scripts.nix
 ./eww/eww.nix
 ./ags.nix
-
 ];
+
 wayland.windowManager.hyprland.enable=true;
+wayland.windowManager.hyprland.extraConfig = ''
+  bind = Ctrl, Q, killactive,
+  '';
+
 home.file.".config/hypr" = {
      source = ./hypr;
      recursive = true;   

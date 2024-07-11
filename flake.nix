@@ -3,6 +3,11 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      # inputs.nixpkgs.follows = "hyprland";
+    };
     homeManager={
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,6 +34,7 @@
         ./packages.nix
         inputs.catppuccin.nixosModules.catppuccin
         inputs.auto-cpufreq.nixosModules.default
+        
       ];
     };
 #remains unused for now can be accessed using home-manager switch

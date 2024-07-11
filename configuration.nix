@@ -8,6 +8,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.home-manager
+      
     ];
 
 programs.hyprland={
@@ -30,7 +31,7 @@ home-manager={
   };
 };
 
-programs.sway.enable=true;
+# programs.sway.enable=true;
 
 nix.settings.experimental-features =[ "nix-command" "flakes" ];
     
@@ -90,11 +91,15 @@ nix.settings.experimental-features =[ "nix-command" "flakes" ];
 
   # Enable the GNOME Desktop Environment.
 
+# xdg.portal.enable=true;
+# xdg.portal.extraPortals= [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland ];
+
   services.xserver.displayManager.gdm.enable = true;
 # services.xserver.displayManager.lightdm.enable=true;
   services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
+
   services.xserver = {
     xkb.layout = "us";
     xkb.variant = "";
