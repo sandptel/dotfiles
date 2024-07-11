@@ -8,6 +8,7 @@
       url = "github:hyprwm/hyprland-plugins";
       # inputs.nixpkgs.follows = "hyprland";
     };
+    matugen.url = "github:InioX/matugen?ref=v2.2.0";
     homeManager={
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
