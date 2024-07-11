@@ -1,5 +1,6 @@
 # Dotfiles
 **Theme - Catppuccin Mocha**
+
 **Bar- AGS**
 
 ![20240712_03h05m30s_grim](https://github.com/user-attachments/assets/0a87f65d-7cb2-4683-9ec2-b4f2347d7729)
