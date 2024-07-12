@@ -41,7 +41,7 @@ qt.style.catppuccin.enable=true;
 
 
 imports = [
-  ./spotify.nix 
+  ./spicetify.nix 
 ];
 
 }
