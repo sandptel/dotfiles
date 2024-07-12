@@ -44,4 +44,10 @@ imports = [
   ./spicetify.nix 
 ];
 
+module.spicetify={
+enable=true;
+theme= "Dribbblish";
+color = "catppuccin-mocha";
+};
+
 }
