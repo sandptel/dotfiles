@@ -38,4 +38,10 @@ gtk.catppuccin.enable =true;
 gtk.catppuccin.gnomeShellTheme=true;
 qt.enable=true;
 qt.style.catppuccin.enable=true;
+
+
+imports = [
+  ./spotify.nix 
+];
+
 }
