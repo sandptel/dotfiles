@@ -5,9 +5,8 @@
 
 ![20240712_03h05m30s_grim](https://github.com/user-attachments/assets/0a87f65d-7cb2-4683-9ec2-b4f2347d7729)
 
-## [Spicetify's Custom Nix Module](home-manager/themes/spicetify.nix)
-### Base
-![base](https://github.com/user-attachments/assets/f5be68b9-cac0-4ea1-8619-7d571e6b6a7e)
+## [Spicetify's Nix Module](home-manager/themes/spicetify.nix)
+
 ### Catppuccin
 ![catppuccin-macchiato](https://github.com/user-attachments/assets/6957abe2-81ba-4c1f-b34b-d46de7cd8a6c)
 

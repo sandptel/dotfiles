@@ -9,6 +9,7 @@
       # inputs.nixpkgs.follows = "hyprland";
     };
     matugen.url = "github:InioX/matugen?ref=v2.2.0";
+    spicetify-nix.url = "github:the-argus/spicetify-nix";
     homeManager={
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
