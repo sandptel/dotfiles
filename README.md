@@ -5,12 +5,11 @@
 
 ![20240712_03h05m30s_grim](https://github.com/user-attachments/assets/0a87f65d-7cb2-4683-9ec2-b4f2347d7729)
 
-[Spicetify with Custom Nix Module (Catppuccin Mocha Theme)](home-manager/themes/spicetify.nix)
-
-![screenshot_2024-07-13-051915](https://github.com/user-attachments/assets/4d7ed9a8-d530-4b36-92c9-d9bf8bb70d6f)
-
-
- 
+## [Spicetify's Custom Nix Module](home-manager/themes/spicetify.nix)
+### Base
+![base](https://github.com/user-attachments/assets/f5be68b9-cac0-4ea1-8619-7d571e6b6a7e)
+### Catppuccin
+![catppuccin-macchiato](https://github.com/user-attachments/assets/6957abe2-81ba-4c1f-b34b-d46de7cd8a6c)
 
 # **!!! Do Not Blindly install these dots**
 
