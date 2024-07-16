@@ -11,6 +11,7 @@ imports=[./ags.nix
 ./scripts/scripts.nix
 ./eww/eww.nix
 ./ags.nix
+./starship.nix
 ];
 
 wayland.windowManager.hyprland.enable=true;
@@ -35,11 +36,11 @@ programs.kitty={
 };
 
 programs.bash.enable=true;
-programs.starship = {
-    enable = true;
-    # catppuccin.enable = true;
-    enableBashIntegration=true;
-  };
+# programs.starship = {
+#     enable = true;
+#     # catppuccin.enable = true;
+#     enableBashIntegration=true;
+#   };
 programs.firefox.enable=true;
 programs.fuzzel.enable=true;
 home.file.".config/fuzzel" = {
