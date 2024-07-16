@@ -1,6 +1,15 @@
 { inputs, pkgs, ... }:
 {
+
+home.file.".config/eww" = {
+  source = ./eww;
+  recursive = true;
+  executable = true;
+};
+
+
 home.packages = with pkgs; [
+  eww
   ubuntu_font_family
   socat
   jq
