@@ -15,21 +15,23 @@ in
 #none of the above commands work and only this sessionVariable command works and only this one theme gets installed via catppuccin-gtk
 
 home.packages= with pkgs;[catppuccin-kde
+whitesur-icon-theme
+gradience 
 gnome.gnome-tweaks
 catppuccin-gtk
 catppuccin-qt5ct];
 
 home.sessionVariables.GTK_THEME = "${theme}";
+# home.sessionVariables.GTK_THEME = "adwaita";
 home.file.".themes/${theme}" = {
      source = ./${theme}; 
      recursive = true;   
      executable = true;  
 };
 home.file.".config/gtk-4.0" = {
-     source = ./${theme}/gtk-4.0; 
+     source = ./catppuccin-mocha-lavender/gtk-4.0; 
      recursive = true;   
      executable = true;  
-     
 };
 catppuccin.enable=true;
 catppuccin.flavor = "mocha";
@@ -42,6 +44,7 @@ qt.style.catppuccin.enable=true;
 
 imports = [
   ./spicetify.nix 
+  ./hyprpaper.nix
 ];
 
 }

@@ -7,7 +7,6 @@
 imports=[./ags.nix
 ./waybar.nix
 ./themes/theme.nix
-./hyprpaper.nix
 ./scripts/scripts.nix
 ./eww/eww.nix
 ./ags.nix
