@@ -34,6 +34,7 @@
         ./configuration.nix
         ./hardware-configuration.nix
         ./packages.nix
+        ./gaming.nix
         inputs.catppuccin.nixosModules.catppuccin
         inputs.auto-cpufreq.nixosModules.default
         
