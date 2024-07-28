@@ -50,7 +50,7 @@ home.file.".config/fuzzel" = {
 
 home.packages = with pkgs;[
 # airshipper
-
+wl-clipboard
 ];
 
   home.stateVersion = "23.11";

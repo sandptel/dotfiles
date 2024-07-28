@@ -7,8 +7,7 @@
     protonup
     lutris
     wine
-    
-
+    playonlinux
   ];
   programs.gamemode.enable=true;
 
