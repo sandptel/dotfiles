@@ -24,7 +24,7 @@ firefox
 vim
 git
 vscode
-obs-studio	
+# obs-studio	
 rustup
 gcc
 glib     
