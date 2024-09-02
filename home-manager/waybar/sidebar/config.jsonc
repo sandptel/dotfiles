@@ -1,0 +1,49 @@
+[
+    {
+        "id": "0",
+        "position": "left", // Add all icons to the center as well
+        "height": 1048, // Increase the height to ensure full icon rendering
+        "width": 48,
+        "spacing": 40,
+        "margin-right": 2,
+        "modules-left": [],
+        "modules-center": [
+            "custom/chrome",
+            "custom/steam",
+            "custom/firefox",
+            "custom/alacritty",
+            "custom/lutris"
+        ],
+        "modules-right": [],
+        "custom/chrome": {
+            "format": "", // Font Awesome icon for Chrome
+            "tooltip": "Google Chrome",
+            "on-click": "google-chrome-stable",
+            "rotate": 90
+        },
+        "custom/steam": {
+            "format": "", // Font Awesome icon for Steam
+            "tooltip": "Steam",
+            "on-click": "steam",
+            "rotate": 90
+        },
+        "custom/firefox": {
+            "format": "", // Font Awesome icon for Firefox
+            "tooltip": "Mozilla Firefox",
+            "on-click": "firefox",
+            "rotate": 90
+        },
+        "custom/alacritty": {
+            "format": "", // Font Awesome icon for Terminal
+            "tooltip": "Alacritty",
+            "on-click": "alacritty",
+            "rotate": 90
+        },
+        "custom/lutris": {
+            "format": "", // Font Awesome icon for Lutris (or another appropriate icon)
+            "tooltip": "Lutris",
+            "on-click": "lutris",
+            "rotate": 90
+        }
+    }
+]

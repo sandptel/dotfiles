@@ -19,7 +19,8 @@
             url = "github:AdnanHodzic/auto-cpufreq";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-      ags.url = "github:Aylur/ags";  
+      ags.url = "github:Aylur/ags"; 
+      nix-colors.url = "github:misterio77/nix-colors"; 
   };
 
   outputs = { self,nixpkgs,home-manager, ... }@inputs: 

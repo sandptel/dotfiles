@@ -1,153 +1,129 @@
 {
+    "position": "top",
+    "margin-bottom": 0,
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 7,
     "height": 30,
-    "spacing": 10,
-    "modules-left": [
-        "hyprland/workspaces",
-        "wlr/taskbar",
-        "custom/media"
-    ],
-    "modules-center": [
-        "hyprland/window"
-    ],
-    "modules-right": [
-        
-        "idle_inhibitor",
-        "custom/weather",
-        "custom/vpn",
-        "network",
-        "pulseaudio",
-        "clock",
-        "clock#date",
-        "battery",
-        "tray"
-    ],
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "icon-size": 23,
-        "icon-theme": "Numix-Circle",
-        "tooltip-format": "{title}",
-        "on-click": "activate",
-        "on-click-right":"maximize",
-        "on-click-middle": "close",
-        "group-apps": true,
-        "sort-by-app-id":true,
-        "app_ids-mapping": {
-            "firefoxdeveloperedition": "firefox-developer-edition"
-        }
-        ,
-        "rewrite": {
-            "Firefox Web Browser": "Firefox",
-            "Foot Server": "Terminal"
-        }
+  
+    "modules-left": ["hyprland/workspaces", "custom/nowplaying"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["battery", "network", "bluetooth", "pulseaudio", "clock", "custom/notifications"],
+  
+    "custom/notifications": {
+      "tooltip": true,
+      "format": "{icon}",
+      "format-icons": {
+        "notification": "<span foreground='red'><sup></sup></span>",
+        "none": "",
+        "dnd-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-none": "",
+        "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "inhibited-none": "",
+        "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-inhibited-none": ""
+      },
+      "return-type": "json",
+      "exec-if": "which swaync-client",
+      "exec": "swaync-client -swb",
+      "on-click": "sleep 0.1 && swaync-client -t -sw",
+      "on-click-right": "swaync-client -d -sw",
+      "escape": true
     },
-    "hyprland/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+  
+    "custom/mediakeys": {
+      "format": "󰎇",
+      "on-click": "playerctl play-pause",
+      "on-double-click": "playerctl next",
+      "on-triple-click": "playerctl previous",
     },
-    "hyprland/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": [
-            "",
-            ""
-        ],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
+  
+    "custom/nowplaying": {
+      "format": "󰎇 {}",
+      "interval": 1,
+      "exec": "~/.config/scripts/nowplaying",
+      "on-click": "playerctl play-pause",
+      "on-double-click": "playerctl next",
+      "on-triple-click": "playerctl previous",
+      "max-length": 60,
     },
+  
     "hyprland/window": {
-        "on-click": "ags -t datemenu",
-        "tooltip": false
+      "format": "{title}",
+      "max-length": 40,
+      "separate-outputs": true,
+      "rewrite": {
+        "": "Hyprland", },
+      "on-click": "~/.config/scripts/swww-pywal",
     },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
+  
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "format-icons": {
+        "active": " ",
+      },
+      "sort-by-number": true,
+      "persistent-workspaces": {
+        "*": 5,
+      },
     },
-    "tray": {
-        "spacing": 10
-    },
+  
     "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+      "format": "{:%H:%M}",
+      "tooltip-format": "{:%a, %B %d %H:%M}",
+      "on-click": "morgen",
     },
-    "clock#date": {
-        "format": "{:%d.%m.%Y}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-    },
-    "backlight": {
-        "format": "{icon} {percent}%",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
-    },
+  
     "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
-        
+      "states": {
+        "warning": 30,
+        "critical": 15,
+      },
+      "format": "{icon}  {capacity}%",
+      "format-full": "{icon}  {capacity}%",
+      "format-charging": " {capacity}%",
+      "format-plugged": " {capacity}%",
+      "format-alt": "{time} {icon}",
+      "format-icons": ["", "", "", "", ""],
+      "on-click": "auto-cpufreq-gtk",
     },
-    "pulseaudio": {
-        "format": "{icon} {volume}% {format_source}",
-        "format-bluetooth": " {icon} {volume}% {format_source}",
-        "format-bluetooth-muted": "  {icon} {format_source}",
-        "format-muted": "  {format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": "",
-        "format-icons": {
-            "default": [
-                "",
-                "",
-                ""
-            ]
-        },
-        "on-click": "ags -t mpris"
-    },
-    "custom/weather": {
-        "format": "{}",
-        "interval": 3600,
-        "exec": "curl -s 'https://wttr.in/~41.03508,28.98331?format=1'",
-        "exec-if": "ping wttr.in -c1"
-    },
-    "custom/vpn": {
-        "tooltip": false,
-        "format": "VPN {} ",
-        "exec": "mullvad status | grep -q 'Connected' && echo '' || echo ''",
-        "interval": 5,
-        "on-click": "mullvad connect",
-        "on-click-right": "mullvad disconnect"
-    },
+  
     "network": {
-        "format-wifi": " {essid} ({signalStrength}%)",
-        "format-ethernet": "⬇{bandwidthDownBytes} ⬆{bandwidthUpBytes}",
-        "interval": 3,
-        "format-linked": "{ifname} (No IP) ",
-        "format": "",
-        "format-disconnected": "",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click": "wl-copy $(ip address show up scope global | grep inet | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c5-)",
-        "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
-        "tooltip-format-wifi": " {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
-        "min-length": 17,
-        "max-length": 17
-    }
-}
+      "tooltip": true,
+      "format-wifi": "  {essid}",
+      "format-ethernet": "{cidr} ",
+      "format-disconnected": "Disconnected ⚠",
+      "on-click": "iwgtk",
+    },
+  
+    "bluetooth": {
+      // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+      "format": " {status}",
+      // "format-disabled": " Disabled", // an empty format will hide the module
+      "format-connected": " {num_connections} connected",
+      "tooltip": true,
+      "format-connected-battery": " {device_alias} ({device_battery_percentage}%)",
+      "tooltip-format": "{controller_alias}\t{controller_address}",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+      "on-click": "blueman-manager",
+    },
+  
+    "pulseaudio": {
+      "format": "{icon}  {volume}%",
+      "tooltip": true,
+      "format-muted": "󰖁   {format_source}",
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""],
+      },
+      "on-click": "pavucontrol",
+    },
+  }

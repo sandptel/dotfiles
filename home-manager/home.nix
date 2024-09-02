@@ -11,18 +11,13 @@ imports=[./ags.nix
 ./eww/eww.nix
 ./ags.nix
 ./starship.nix
+./hypr.nix
+
+inputs.nix-colors.homeManagerModules.default
+
 ];
 
 wayland.windowManager.hyprland.enable=true;
-wayland.windowManager.hyprland.extraConfig = ''
-  bind = Ctrl, Q, killactive,
-  '';
-
-home.file.".config/hypr" = {
-     source = ./hypr;
-     recursive = true;   
-     executable = true;  
-};
  
 module.phcontrol.enable=true;
 
@@ -47,6 +42,8 @@ home.file.".config/fuzzel" = {
      recursive = true;   
      executable = true;  
 };
+
+
 
 home.packages = with pkgs;[
 # airshipper

@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+# Displays metadata for the currently playing song
+
+playerctl metadata --format "{{title}} - {{artist}} ({{ duration(position)}})"
