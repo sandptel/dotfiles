@@ -25,7 +25,9 @@ with lib; let
   #   done
   # '';
 in {
-  home.packages = [ pkgs.hyprpaper];
+  home.packages = [ pkgs.hyprpaper pkgs.killall 
+  # wallpaperRandomizer
+  ];
 
   services.hyprpaper = {
     enable = true;
@@ -41,6 +43,7 @@ in {
 
     wallpaper = [
     "eDP-1,${toString wallpapers}"
+    "HDMI-A-1,${toString wallpapers}"
     ];
     };
   };

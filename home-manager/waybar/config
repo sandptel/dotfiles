@@ -12,6 +12,7 @@
     "hyprland/workspaces"
   ],
   "modules-right": [
+    "custom/lock-status",
     "network",
     "pulseaudio",
     "battery",
@@ -52,6 +53,11 @@
       "empty": "<span font='8'></span>",
       "persistent": "<span font='12'>󰊠</span>"
     }
+  },
+  "custom/lock-status": {
+    "exec": "checklock",
+    "return-type": "json",
+    "interval": 5
   },
   "network": {
     "tooltip": false,

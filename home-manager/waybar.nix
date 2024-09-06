@@ -20,7 +20,9 @@
 };
 
 
-home.packages = [ (import ./waybar/sidebar/sidebar.nix {inherit pkgs;}) ];
+home.packages = [ (import ./waybar/sidebar/sidebar.nix {inherit pkgs;})
+pkgs.wlogout
+ ];
 hyprland.extraConfig= "
 # exec-once = sidebar
 exec-once = waybar

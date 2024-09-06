@@ -12,6 +12,7 @@ imports=[./ags.nix
 ./ags.nix
 ./starship.nix
 ./hypr.nix
+./hyprlock.nix
 
 inputs.nix-colors.homeManagerModules.default
 
