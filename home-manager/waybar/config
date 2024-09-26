@@ -57,6 +57,7 @@
   "custom/lock-status": {
     "exec": "checklock",
     "return-type": "json",
+    "on-click": "hyprlock -q",
     "interval": 5
   },
   "network": {
