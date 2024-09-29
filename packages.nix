@@ -1,5 +1,8 @@
 { config,inputs, pkgs, ... }:
 {
+services.fprintd.enable = true;
+# services.fprintd.tod.enable = true;
+# services.fprintd.tod.driver = pkgs.libfprint;
 services.flatpak.enable = true;
   users.users.roronoa = {
     isNormalUser = true;

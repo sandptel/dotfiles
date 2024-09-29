@@ -27,10 +27,26 @@
   let 
   system = "x86_64-linux";
   pkgs = nixpkgs.legacyPackages.${system};
+  myOverlay = final: prev: {
+      libfprint = prev.libfprint.overrideAttrs (old: {
+        src = builtins.fetchGit {
+          url = "https://gitlab.freedesktop.org/depau/libfprint.git";
+          ref = "elanmoc2";
+          rev = "f4439ce96b2938fea8d4f42223d7faea05bd4048";
+        };
+      });
+
+      fprintd = prev.fprintd.overrideAttrs (old: {
+        mesonCheckFlags = [
+          "--no-suite" "fprintd:TestPamFprintd"
+          "--no-suite" "fprintd:FPrintdManagerPreStartTests"
+        ];
+      });
+    };
   in
   {
     nixosConfigurations.roronoa = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit self system inputs;};
+      specialArgs = {inherit self system inputs myOverlay;};
       modules = [
         ./configuration.nix
         ./hardware-configuration.nix
@@ -38,7 +54,6 @@
         ./gaming.nix
         inputs.catppuccin.nixosModules.catppuccin
         inputs.auto-cpufreq.nixosModules.default
-        
       ];
     };
 #remains unused for now can be accessed using home-manager switch
