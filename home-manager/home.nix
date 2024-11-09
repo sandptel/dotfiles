@@ -26,11 +26,12 @@ programs.kitty={
   enable = true;
   extraConfig = ''
   font_size 14
-  background_opacity 0.6
+  background_opacity 0.2
   '';
 };
 
 programs.bash.enable=true;
+programs.fish.enable=true;
 # programs.starship = {
 #     enable = true;
 #     # catppuccin.enable = true;

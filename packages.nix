@@ -11,6 +11,7 @@ services.flatpak.enable = true;
     packages = with pkgs; [ 
 figma-linux
 wl-clipboard
+spotify
 grim
 slurp
 blueman

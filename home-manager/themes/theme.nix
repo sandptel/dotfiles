@@ -46,7 +46,7 @@ home.file.".config/gtk-4.0" = {
 
 
 imports = [
-  # ./spicetify.nix 
+  # ./spicetify.nix //up for fix
   ./hyprpaper.nix
 ];
 
