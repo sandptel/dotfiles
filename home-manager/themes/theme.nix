@@ -33,16 +33,16 @@ home.file.".config/gtk-4.0" = {
      recursive = true;   
      executable = true;  
 };
-# catppuccin.enable=true;
-# qt.style.name="kvantum";
-# qt.platformTheme.name="kvantum";
-# catppuccin.flavor = "mocha";
+catppuccin.enable=true;
+qt.style.name="kvantum";
+qt.platformTheme.name="kvantum";
+catppuccin.flavor = "mocha";
 # catppuccin.accent = "Sky";
-# gtk.catppuccin.enable =true;
-# gtk.enable=true;
-# gtk.catppuccin.gnomeShellTheme=true;
-# qt.enable=true;
-# qt.style.catppuccin.enable=true;
+gtk.catppuccin.enable =true;
+gtk.enable=true;
+gtk.catppuccin.gnomeShellTheme=true;
+qt.enable=true;
+qt.style.catppuccin.enable=true;
 
 
 imports = [
