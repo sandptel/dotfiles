@@ -5,17 +5,17 @@
   home.enableNixpkgsReleaseCheck = false;
 
 imports=[./ags.nix
-./waybar.nix
+# ./waybar.nix
+./glacier.nix
 ./themes/theme.nix
 ./scripts/scripts.nix
-./eww/eww.nix
+# ./eww/eww.nix
 ./ags.nix
 ./starship.nix
 ./hypr.nix
 ./hyprlock.nix
 
 inputs.nix-colors.homeManagerModules.default
-
 ];
 
 wayland.windowManager.hyprland.enable=true;

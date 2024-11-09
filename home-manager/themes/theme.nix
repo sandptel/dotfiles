@@ -17,7 +17,7 @@ in
 home.packages= with pkgs;[catppuccin-kde
 whitesur-icon-theme
 gradience 
-gnome.gnome-tweaks
+gnome-tweaks
 catppuccin-gtk
 catppuccin-qt5ct];
 
@@ -33,17 +33,20 @@ home.file.".config/gtk-4.0" = {
      recursive = true;   
      executable = true;  
 };
-catppuccin.enable=true;
-catppuccin.flavor = "mocha";
-catppuccin.accent = "lavender";
-gtk.catppuccin.enable =true;
-gtk.catppuccin.gnomeShellTheme=true;
-qt.enable=true;
-qt.style.catppuccin.enable=true;
+# catppuccin.enable=true;
+# qt.style.name="kvantum";
+# qt.platformTheme.name="kvantum";
+# catppuccin.flavor = "mocha";
+# catppuccin.accent = "Sky";
+# gtk.catppuccin.enable =true;
+# gtk.enable=true;
+# gtk.catppuccin.gnomeShellTheme=true;
+# qt.enable=true;
+# qt.style.catppuccin.enable=true;
 
 
 imports = [
-  ./spicetify.nix 
+  # ./spicetify.nix 
   ./hyprpaper.nix
 ];
 

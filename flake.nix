@@ -2,7 +2,7 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
@@ -51,7 +51,7 @@
         ./configuration.nix
         ./hardware-configuration.nix
         ./packages.nix
-        ./gaming.nix
+        # ./gaming.nix
         inputs.catppuccin.nixosModules.catppuccin
         inputs.auto-cpufreq.nixosModules.default
       ];
