@@ -5,7 +5,7 @@
   home.enableNixpkgsReleaseCheck = false;
 
 imports=[./ags.nix
-# ./waybar.nix
+./waybar.nix
 ./glacier.nix
 ./themes/theme.nix
 ./scripts/scripts.nix
